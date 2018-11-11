@@ -55,31 +55,66 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+function ifunction(x, y, z){
+	if(x === undefined || y === undefined || z === undefined){
+    	return "Preencha todos os valores corretamente";
+    	} else{
+    		result = (x*y*z)+2;
+    		return result;
+    	}
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+ifunction(1, 2, );
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// Preencha todos os valores corretamente
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+ifunction(10, 10, 10);
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+//1002
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 /*
 Crie uma função com as seguintes características:
-1. A função deve receber 3 argumentos.
-2. Se somente um argumento for passado, retorne o valor do argumento.
+1. A função deve receber 3 argumentos. 
+2. Se somente um argumento for passado, retorne o valor do argumento. 
 3. Se dois argumentos forem passados, retorne a soma dos dois argumentos.
 4. Se todos os argumentos forem passados, retorne a soma do primeiro com o segundo, e o resultado, dividido pelo terceiro.
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function argumentos(x, y, z){
+	if((x === undefined) && (y === undefined) && (z === undefined)){
+    	return false;
+    	//Se nenhum parâmetro for passado
+		} else if((y === undefined) && (z === undefined)){
+    		return x;
+    		//Se somente o 1º parâmetro for passado
+    		} else if((x<=0 || x>0) && (y<=0 || y>0) && (z<=0 || z>0)){
+        	return (x+y)/z;
+        	//Se todos os parâmetros forem passado
+        	} else if((x<=0 || x>0) && (y<=0 || y>0)){
+    		return x + y;
+    		//Se só os 2 primeiros parâmetros forem passados
+			} else{
+    			return null;
+    			//Caso não obedecer nenhum dos requisitos acima
+    			}
+}
+      
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+
 ```
