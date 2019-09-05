@@ -72,7 +72,7 @@ Crie um método chamado `nomeCompleto`, que retorne a frase:
 */
 
 pessoa.nomeCompleto = function(){
-	return('Olá! Meu nome é ' + pessoa.nome + ' ' + pessoa.sobrenome + '!'));
+	return('Olá! Meu nome é ' + pessoa.nome + ' ' + pessoa.sobrenome + '!');
 };
 
 /*
@@ -163,13 +163,13 @@ pessoa.andando; //true
 /*
 Se a pessoa ainda está andando, faça-a parar.
 */
-pessoa.parar;
+pessoa.parar();
 
 /*
 E agora: a pessoa ainda está andando? (Use uma instrução para responder e
 comentários inline ao lado da instrução para mostrar a resposta retornada)
 */
-pessoa.andando; //false
+pessoa.andando(); //false
 
 /*
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
@@ -194,8 +194,28 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-?
+
+pessoa.apresentacao = function(){
+  var sexo = 'o';
+  var ano = 'anos';
+  var andado = 'metros!';
+  
+  if(pessoa.sexo === "Feminino"){
+    sexo = 'a';
+  }
+  
+  if(pessoa.idade == 1){
+    ano = 'ano';
+  }
+  
+  if(pessoa.caminhouQuantosMetros == 1){
+    andado = 'metro!';
+  }
+  
+  
+  return ('Olá eu sou ' + sexo + ' ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ano + ' de idade, ' + pessoa.altura + 'm de altura, meu peso é ' + pessoa.peso + 'Kg e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' ' + andado);
+};
 
 // Agora, apresente-se ;)
-?
+pessoa.apresentacao();
 ```
